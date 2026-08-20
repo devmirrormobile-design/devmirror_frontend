@@ -1,32 +1,17 @@
-# Flutter Frontend
+# devmirrorui
 
-This is the Flutter frontend application connecting to the FastAPI backend.
+A new Flutter project.
 
-## Setup
+## Getting Started
 
-1. Make sure Flutter is installed.
-2. Run `flutter pub get` to install dependencies.
+This project is a starting point for a Flutter application.
 
-## Running the App
+A few resources to get you started if this is your first Flutter project:
 
-To run the app, make sure your backend is running first.
+- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
+- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
 
-### Android Emulator
-By default, the app uses `http://10.0.2.2:8000` to connect to the backend running on the host machine.
-```bash
-flutter run -d chrome # Or your android emulator ID
-```
-
-### iOS Simulator
-By default, the app uses `http://localhost:8000` to connect to the backend.
-
-### Physical Device
-If you are running on a physical device, you need to point the app to your computer's local IP address (e.g., `192.168.1.5`). You can do this by using `--dart-define`:
-```bash
-flutter run --dart-define=API_URL=http://192.168.1.5:8000
-```
-
-## Testing
-```bash
-flutter test
-```
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
