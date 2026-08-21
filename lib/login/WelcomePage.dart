@@ -52,20 +52,19 @@ class WelcomePage extends StatelessWidget {
             // MAIN CONTENT
             // =========================================================
 
-            Center(
+            Positioned.fill(
               child: SingleChildScrollView(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 16,
                 ),
-
-                child: ConstrainedBox(
-                  constraints: const BoxConstraints(
-                    maxWidth: 480,
-                  ),
-
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                child: Center(
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(
+                      maxWidth: 480,
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.center,
 
                     children: [
 
@@ -353,9 +352,10 @@ class WelcomePage extends StatelessWidget {
                 ),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
-    );
-  }
+    ),
+  );
+}
 }

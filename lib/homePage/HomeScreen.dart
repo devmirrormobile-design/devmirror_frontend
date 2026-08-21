@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:devmirrorui/homePage/PracticeScreen.dart';
 import 'package:devmirrorui/homePage/InterviewScreen.dart';
+import 'package:devmirrorui/homePage/InterviewSetupScreen.dart';
+import 'package:devmirrorui/homePage/ProgressScreen.dart';
+import 'package:devmirrorui/core/utils/dimensions.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
@@ -42,6 +45,8 @@ class _DashboardPageState extends State<DashboardPage> {
 
   @override
   Widget build(BuildContext context) {
+    Dimensions.init(context);
+
     return LayoutBuilder(
       builder: (context, constraints) {
         final bool desktop = constraints.maxWidth >= 900;
@@ -134,14 +139,14 @@ class _DashboardPageState extends State<DashboardPage> {
           _navItem(Icons.video_camera_front, "Interview", false, () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const InterviewPage()),
+              MaterialPageRoute(builder: (context) => const InterviewSetupScreen()),
             );
           }),
 
           _navItem(Icons.trending_up, "Progress", false, () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const PracticePage()),
+              MaterialPageRoute(builder: (context) => const ProgressScreen()),
             );
           }),
 
@@ -1358,7 +1363,14 @@ class _DashboardPageState extends State<DashboardPage> {
         if (index == 2) {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const InterviewPage()),
+            MaterialPageRoute(builder: (context) => const InterviewSetupScreen()),
+          );
+        }
+
+        if (index == 3) {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const ProgressScreen()),
           );
         }
       },

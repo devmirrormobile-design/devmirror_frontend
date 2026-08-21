@@ -9,11 +9,12 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFFFFFFF),
       body: SafeArea(
-        child: Center(
+        child: SizedBox.expand(
           child: SingleChildScrollView(
             padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: ConstrainedBox(
-              constraints: const BoxConstraints(
+            child: Center(
+              child: ConstrainedBox(
+                constraints: const BoxConstraints(
                 maxWidth: 400,
               ),
               child: Column(
@@ -370,6 +371,7 @@ class LoginPage extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
+    ),
+  );
+}
 }

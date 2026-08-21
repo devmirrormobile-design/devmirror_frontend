@@ -72,16 +72,16 @@ class _SignupPageState extends State<SignupPage> {
             _backgroundDecoration(),
 
             // Main content
-            Center(
+            Positioned.fill(
               child: SingleChildScrollView(
                 padding: const EdgeInsets.all(16),
-
-                child: ConstrainedBox(
-                  constraints: const BoxConstraints(
-                    maxWidth: 560,
+                child: Center(
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(
+                      maxWidth: 560,
+                    ),
+                    child: _buildContent(),
                   ),
-
-                  child: _buildContent(),
                 ),
               ),
             ),
